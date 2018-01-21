@@ -1,0 +1,5 @@
+language: python
+install: pip install vim-vint
+script:
+    - vint syntax/.vim
+    - vint plugin/.vim
