@@ -6,10 +6,12 @@ syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallLabel "\v[a-z]+"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
+syntax match dhallString '\v"*"'
 syntax keyword dhallKeyword let in
 
+highlight link dhallString String
 highlight link dhallLabel Identifier
-highlight link dhallRecord Operator
+highlight link dhallRecord Special
 highlight link dhallKeyword Keyword
 highlight link dhallType Structure
 highlight link dhallParens Special
