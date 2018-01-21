@@ -6,8 +6,8 @@ syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallLabel "\v[a-z]+"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
-syntax region dhallString start=+"+ end=+"+
 syntax keyword dhallKeyword let in
+syntax region dhallString start=+"+ end=+"+
 
 highlight link dhallString String
 highlight link dhallLabel Identifier
