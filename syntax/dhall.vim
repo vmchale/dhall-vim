@@ -4,6 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
+syntax match dhallNumber "\v[0-9]"
 syntax match dhallLambda "λ\|→"
 syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallLabel "\v[a-z]+"
@@ -14,6 +15,7 @@ syntax region dhallString start=+"+ end=+"+
 syntax match dhallComment '\v--.*$' contains=@Spell
 syntax region dhallComment start="{-" end="-}" contains=@Spell
 
+highlight link dhallNumber Number
 highlight link dhallLambda Special
 highlight link dhallString String
 highlight link dhallLabel Identifier
