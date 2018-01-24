@@ -8,14 +8,14 @@ syntax match dhallOperator "//"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallLambda "λ\|→"
 syntax match dhallType "\v[A-Z][a-z]*"
-syntax match dhallLabel "\v[a-z]+"
+syntax match dhallLabel "\v[a-z][A-Za-z]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in
 syntax region dhallString start=+"+ end=+"+
 syntax match dhallComment '\v--.*$' contains=@Spell
 syntax region dhallComment start="{-" end="-}" contains=@Spell
-syntax match dhallUrl "https://[a-zA-Z0-9/.]*"
+syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 
 highlight link dhallUrl String
 highlight link dhallOperator Operator
