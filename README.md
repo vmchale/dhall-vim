@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/vmchale/dhall-vim.svg?branch=master)](https://travis-ci.org/vmchale/dhall-vim)
 
 This package provides syntax highlighting for
-[Dhall](https://hackage.haskell.org/package/dhall), a configuration language. 
+[Dhall](https://hackage.haskell.org/package/dhall), a configuration language.
 
 ## Installation
 
