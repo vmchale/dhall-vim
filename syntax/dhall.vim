@@ -15,7 +15,7 @@ syntax keyword dhallKeyword let in
 syntax region dhallString start=+"+ end=+"+
 syntax match dhallComment '\v--.*$' contains=@Spell
 syntax region dhallComment start="{-" end="-}" contains=@Spell
-syntax region dhallUrl start="https://" end="\v($\| )"
+syntax region dhallUrl start="https://" end="\v(\n\|$\| )"
 
 highlight link dhallUrl String
 highlight link dhallOperator Operator
