@@ -16,7 +16,9 @@ syntax region dhallString start=+"+ end=+"+
 syntax match dhallComment '\v--.*$' contains=@Spell
 syntax region dhallComment start="{-" end="-}" contains=@Spell
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
+syntax keyword dhallBool True False
 
+highlight link dhallBool Underlined
 highlight link dhallUrl String
 highlight link dhallOperator Operator
 highlight link dhallNumber Number
