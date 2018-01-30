@@ -4,7 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
-syntax match dhallBrackets "(<\|>\||)"
+syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "//"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallLambda "∀λ\|→"
