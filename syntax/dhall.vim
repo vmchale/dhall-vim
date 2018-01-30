@@ -4,6 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
+syntax match dhallBrackets "\<\>"
 syntax match dhallOperator "//"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallLambda "λ\|→"
@@ -18,6 +19,7 @@ syntax region dhallComment start="{-" end="-}" contains=@Spell
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallBrackets Operator
 highlight link dhallBool Underlined
 highlight link dhallUrl String
 highlight link dhallOperator Operator
