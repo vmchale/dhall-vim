@@ -7,7 +7,7 @@ endif
 syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "//"
 syntax match dhallNumber "\v[0-9]"
-syntax match dhallLambda "∀λ\|→"
+syntax match dhallLambda "∀\|λ\|→"
 syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallLabel "\v[a-z][A-Za-z]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
