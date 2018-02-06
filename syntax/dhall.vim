@@ -4,6 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
+syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "//"
 syntax match dhallNumber "\v[0-9]"
@@ -14,11 +15,12 @@ syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in
 syntax region dhallString start=+"+ end=+"+
-syntax match dhallComment '\v--.*$' contains=@Spell
-syntax region dhallComment start="{-" end="-}" contains=@Spell
+syntax match dhallComment '\v--.*$' contains=@Spell,@DhallTodo
+syntax region dhallComment start="{-" end="-}" contains=@Spell,@DhallTodo
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallTodo Todo
 highlight link dhallBrackets Operator
 highlight link dhallBool Underlined
 highlight link dhallUrl String
