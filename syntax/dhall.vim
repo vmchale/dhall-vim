@@ -15,8 +15,8 @@ syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in
 syntax region dhallString start=+"+ end=+"+
-syntax match dhallComment '\v--.*$' contains=@Spell,@DhallTodo
-syntax region dhallComment start="{-" end="-}" contains=@Spell,@DhallTodo
+syntax match dhallComment '\v--.*$' contains=@Spell,@dhallTodo
+syntax region dhallComment start="{-" end="-}" contains=@Spell,@dhallTodo
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
