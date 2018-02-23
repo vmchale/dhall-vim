@@ -4,6 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
+syntax match dhallInterpolation "\v\{.*\}"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "//"
@@ -20,6 +21,7 @@ syntax region dhallComment start="{-" end="-}" contains=@Spell,@dhallTodo
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallInterpolation Special
 highlight link dhallTodo Todo
 highlight link dhallBrackets Operator
 highlight link dhallBool Underlined
