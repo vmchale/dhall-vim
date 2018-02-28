@@ -36,5 +36,6 @@ highlight link dhallKeyword Keyword
 highlight link dhallType Structure
 highlight link dhallParens Special
 highlight link dhallComment Comment
+highlight link dhallMiltilineComment Comment
 
 let b:current_syntax = 'dhall'
