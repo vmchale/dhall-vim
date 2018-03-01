@@ -9,8 +9,10 @@ set smarttab
 au BufNewFile,BufRead *.dhall
 \ setl shiftwidth=2
 
-if g:dhall_use_ctags == 1
-    augroup dhall
-        autocmd BufWritePost *.dhall silent !ctags -R .
-    augroup END
+if exists('g:dhall_use_ctags')
+    if g:dhall_use_ctags == 1
+        augroup dhall
+            autocmd BufWritePost *.dhall silent !ctags -R .
+        augroup END
+    endif
 endif
