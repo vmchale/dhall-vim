@@ -16,7 +16,7 @@ syntax match dhallLabel "\v[a-z_][A-Za-z0-9]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in
-syntax match dhallEsc +\v\\"+
+syntax match dhallEsc +\\"+
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallString
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
