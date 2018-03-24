@@ -23,6 +23,7 @@ syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTod
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallEsc Special
 highlight link dhallInterpolation Special
 highlight link dhallTodo Todo
 highlight link dhallBrackets Operator
