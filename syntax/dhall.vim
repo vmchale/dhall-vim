@@ -14,6 +14,7 @@ syntax match dhallOperator "⫽"
 syntax match dhallOperator "∧"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallNumber "\v\+[0-9]"
+syntax match dhallIndex "@[0-9]+" contains=dhallNumber
 syntax match dhallLambda "∀\|λ\|→\|->\|\\"
 syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallSpecialLabel "\v`[A-Z][a-z]*`"
@@ -33,6 +34,7 @@ syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallIndex Special
 highlight link dhallSpecialLabel Operator
 highlight link dhallEsc Special
 highlight link dhallInterpolation Special
