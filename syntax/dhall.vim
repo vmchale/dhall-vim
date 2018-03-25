@@ -16,7 +16,7 @@ syntax match dhallNumber "\v[0-9]"
 syntax match dhallNumber "\v\+[0-9]"
 syntax match dhallLambda "∀\|λ\|→\|->\|\\"
 syntax match dhallType "\v[A-Z][a-z]*"
-syntax match dhallLabel "\v`[A-Z][a-z]*`"
+syntax match dhallSpecialLabel "\v`[A-Z][a-z]*`"
 syntax match dhallLabel "\v[A-Z][a-z]*/[a-z_][A-Za-z0-9\.]*"
 syntax match dhallLabel "\v[a-z_][A-Za-z0-9]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
@@ -29,6 +29,7 @@ syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTod
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallSpecialLabel Operator
 highlight link dhallEsc Special
 highlight link dhallInterpolation Special
 highlight link dhallTodo Todo
