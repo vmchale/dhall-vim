@@ -14,7 +14,7 @@ syntax match dhallOperator "⫽"
 syntax match dhallOperator "∧"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallNumber "\v\+[0-9]"
-syntax match dhallIndex "@[0-9]+" contains=dhallNumber
+syntax match dhallIndex "\v\@[0-9]+" contains=dhallNumber
 syntax match dhallLambda "∀\|λ\|→\|->\|\\"
 syntax match dhallType "\v[A-Z][a-z]*"
 syntax match dhallSpecialLabel "\v`[A-Z][a-z]*`"
