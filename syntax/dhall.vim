@@ -18,7 +18,7 @@ syntax match dhallLabel "\v[A-Z][a-z]*/[a-z_][A-Za-z0-9]*"
 syntax match dhallLabel "\v[a-z_][A-Za-z0-9]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
-syntax keyword dhallKeyword let in forall constructors
+syntax keyword dhallKeyword let in forall constructors if then else
 syntax match dhallEsc +\\"+
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
