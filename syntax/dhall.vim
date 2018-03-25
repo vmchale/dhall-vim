@@ -7,6 +7,7 @@ endif
 syntax match dhallInterpolation "\v\$\{[^\}]*\}"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
+syntax match dhallOperator "+\|*"
 syntax match dhallOperator "//"
 syntax match dhallOperator "/\\"
 syntax match dhallOperator "⫽"
