@@ -22,7 +22,7 @@ syntax match dhallLabel "\v[A-Z][a-z]*/[a-z_][A-Za-z0-9\.]*"
 syntax match dhallLabel "\v[a-z_][A-Za-z0-9]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
-syntax keyword dhallKeyword let in forall constructors if then else merge
+syntax keyword dhallKeyword let in forall constructors if then else merge env
 syntax match dhallEsc +\\"+
 syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
