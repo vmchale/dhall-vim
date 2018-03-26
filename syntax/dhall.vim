@@ -24,7 +24,8 @@ syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in forall constructors if then else merge
 syntax match dhallEsc +\\"+
-syntax region dhallString start=+''+ end=+''+
+syntax match dhallSingleSpecial +'''+
+syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
