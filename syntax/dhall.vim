@@ -26,7 +26,7 @@ syntax keyword dhallKeyword let in forall constructors if then else merge
 syntax match dhallEsc +\\"+
 syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
-syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallSingleSpecial
+syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
