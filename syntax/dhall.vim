@@ -24,6 +24,7 @@ syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in forall constructors if then else merge env
 syntax match dhallEsc +\\["\\abfnrtv$/]+
+syntax match dhallEsc "\\u[a-f0-9]+"
 syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
