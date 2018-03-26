@@ -25,6 +25,7 @@ syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in forall constructors if then else merge
 syntax match dhallEsc +\\"+
 syntax match dhallSingleSpecial +'''+
+syntax match dhallSingleSpecial +''${''+
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
@@ -36,6 +37,7 @@ syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
 syntax keyword dhallBool True False
 
+highlight link dhallSingleSpecial Special
 highlight link dhallIndex Special
 highlight link dhallSpecialLabel Operator
 highlight link dhallEsc Special
