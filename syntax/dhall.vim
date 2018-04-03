@@ -35,8 +35,8 @@ syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
-syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
+syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax keyword dhallBool True False
 
 highlight link dhallSingleSpecial Special
