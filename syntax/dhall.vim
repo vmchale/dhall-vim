@@ -24,11 +24,9 @@ syntax match dhallParens "(\|)\|\[\|\]\|,"
 syntax match dhallRecord "{\|}\|:"
 syntax keyword dhallKeyword let in forall constructors if then else merge env
 syntax match dhallEsc +\\["\\abfnrtv$/]+
-syntax match dhallEsc "\\u[a-f0-9]+"
+" syntax match dhallEsc "\\u[a-f0-9]+"
 syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
-syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
-syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
@@ -36,6 +34,8 @@ syntax match dhallUrl "http://[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
 syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
+syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
+syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax keyword dhallBool True False
 
 highlight link dhallSingleSpecial Special
