@@ -16,3 +16,14 @@ if exists('g:dhall_use_ctags')
         augroup END
     endif
 endif
+
+function StripTrailingWhitespace()
+  let myline=line('.')
+  let mycolumn = col('.')
+  exec 'silent %s/  *$//'
+  call cursor(myline, mycolumn)
+endfunction
+
+augroup dhall
+    au BufWritePre *.dhall silent! call StripTrailingWhitespace()
+augroup END
