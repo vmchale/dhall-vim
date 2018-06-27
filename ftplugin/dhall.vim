@@ -17,11 +17,11 @@ if exists('g:dhall_use_ctags')
     endif
 endif
 
-function StripTrailingWhitespace()
-  let myline=line('.')
-  let mycolumn = col('.')
-  exec 'silent %s/  *$//'
-  call cursor(myline, mycolumn)
+function! StripTrailingWhitespace()
+    let myline=line('.')
+    let mycolumn = col('.')
+    exec 'silent %s/  *$//'
+    call cursor(myline, mycolumn)
 endfunction
 
 augroup dhall
