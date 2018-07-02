@@ -1,6 +1,9 @@
 ---
 language: python
-install: pip install vim-vint
+install:
+    - pip install -U setuptools
+    - pip install -U pip
+    - pip install vim-vint
 script:
     - vint syntax/dhall.vim
     - vint ftdetect/dhall.vim
