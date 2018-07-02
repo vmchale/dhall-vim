@@ -1,5 +1,10 @@
-language: python
+---
+language: c
+addons:
+  apt:
+    packages:
+      - python3-pip
 install: pip3 install vim-vint
 script:
-    - vint syntax/dhall.vim
-    - vint ftdetect/dhall.vim
+  - vint syntax/dhall.vim
+  - vint ftdetect/dhall.vim
