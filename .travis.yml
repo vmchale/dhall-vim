@@ -1,5 +1,5 @@
 language: python
-install: pip3 install vim-vint --upgrade
+install: pip3 install vim-vint
 script:
     - vint syntax/dhall.vim
     - vint ftdetect/dhall.vim
