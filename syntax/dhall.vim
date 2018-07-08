@@ -8,10 +8,9 @@ syntax match dhallInterpolation "\v\$\{[^\}]*\}"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "+\|*\|#"
-syntax match dhallOperator "//"
-syntax match dhallOperator "/\\"
-syntax match dhallOperator "⫽"
-syntax match dhallOperator "∧"
+syntax match dhallOperator "//\|⫽"
+syntax match dhallOperator "/\\\|∧"
+syntax match dhallOperator "//\\\\\|⩓"
 syntax match dhallNumber "\v[0-9]"
 syntax match dhallNumber "\v\+[0-9]"
 syntax match dhallIndex "\v\@[0-9]+" contains=dhallNumber
