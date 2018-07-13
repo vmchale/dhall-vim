@@ -5,6 +5,11 @@ if exists('b:current_syntax')
 endif
 
 syntax match dhallInterpolation "\v\$\{[^\}]*\}"
+syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "http://[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "\.\./[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "\./[a-zA-Z0-9/.-]*"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
 syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
