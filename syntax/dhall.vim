@@ -5,6 +5,11 @@ if exists('b:current_syntax')
 endif
 
 syntax match dhallInterpolation "\v\$\{[^\}]*\}"
+syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "http://[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "\.\./[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "\./[a-zA-Z0-9/.-]*"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
 syntax match dhallOperator "+\|*\|#"
@@ -29,11 +34,6 @@ syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
-syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "http://[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
