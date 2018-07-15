@@ -6,8 +6,6 @@ let b:dhall_ftplugin = 1
 setlocal commentstring=--\ %s
 
 set smarttab
-au BufNewFile,BufRead *.dhall
-\ setl shiftwidth=2
 
 if exists('g:dhall_use_ctags')
     if g:dhall_use_ctags == 1
@@ -25,5 +23,6 @@ function! StripTrailingWhitespace()
 endfunction
 
 augroup dhall
+    au BufNewFile,BufRead *.dhall setl shiftwidth=2
     au BufWritePre *.dhall silent! call StripTrailingWhitespace()
 augroup END
