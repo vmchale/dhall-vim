@@ -14,4 +14,4 @@ Plug 'vmchale/dhall-vim'
 ```
 ## Screenshot
 
-![Syntax highlighting demonstration](https://raw.githubusercontent.com/vmchale/dhall-vim/master/screenshots/dhall-syntax.png)
+![Syntax highlighting demonstration](https://github.com/vmchale/dhall-vim/raw/master/dhall-syntax.png)
