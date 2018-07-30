@@ -12,3 +12,6 @@ Using [vim-plug](https://github.com/junegunn/vim-plug):
 ```vim
 Plug 'vmchale/dhall-vim'
 ```
+## Screenshot
+
+![Syntax highlighting demonstration](https://raw.githubusercontent.com/vmchale/dhall-vim/master/screenshots/dhall-syntax.png)
