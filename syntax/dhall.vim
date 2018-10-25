@@ -29,11 +29,11 @@ syntax match dhallSingleSpecial +'''+
 syntax match dhallSingleSpecial +''${+
 syntax match dhallComment '\v--.*$' contains=@Spell,dhallTodo
 syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTodo,dhallMultilineComment
-syntax match dhallUrl "https://[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "http://[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "/[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "../[a-zA-Z0-9/.-]*"
-syntax match dhallUrl "./[a-zA-Z0-9/.-]*"
+syntax match dhallUrl "https://[a-zA-Z0-9/.-_]*"
+syntax match dhallUrl "http://[a-zA-Z0-9/.-_]*"
+syntax match dhallUrl "/[a-zA-Z0-9/.-_]*"
+syntax match dhallUrl "../[a-zA-Z0-9/.-_]*"
+syntax match dhallUrl "./[a-zA-Z0-9/.-_]*"
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
