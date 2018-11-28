@@ -22,5 +22,7 @@ function! StripTrailingWhitespace()
     call cursor(myline, mycolumn)
 endfunction
 
-au BufNewFile,BufRead *.dhall setl shiftwidth=2
-au BufWritePre *.dhall silent! call StripTrailingWhitespace()
+augroup dhall
+    au BufNewFile,BufRead *.dhall setl shiftwidth=2
+    au BufWritePre *.dhall silent! call StripTrailingWhitespace()
+augroup END
