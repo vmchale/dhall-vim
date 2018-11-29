@@ -32,8 +32,8 @@ syntax region dhallMultilineComment start="{-" end="-}" contains=@Spell,dhallTod
 syntax match dhallUrl "https://[a-zA-Z0-9/.\-_]*"
 syntax match dhallUrl "http://[a-zA-Z0-9/.\-_]*"
 syntax match dhallUrl "/[a-zA-Z0-9/.\-_]*"
-syntax match dhallUrl "../[a-zA-Z0-9/.\-_]*"
-syntax match dhallUrl "./[a-zA-Z0-9/.\-_]*"
+syntax match dhallUrl "\.\./[a-zA-Z0-9/.\-_]*"
+syntax match dhallUrl "\./[a-zA-Z0-9/.\-_]*"
 syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation,dhallSingleSpecial
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
