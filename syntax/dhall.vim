@@ -17,7 +17,7 @@ syntax match dhallIndex "\v\@[0-9]+" contains=dhallNumber
 syntax match dhallLambda "∀\|λ\|→\|->\|\\"
 syntax match dhallType "\v[A-Z][a-z0-9A-Z]*"
 syntax match dhallSpecialLabel "\v`[A-Z][a-z]*`"
-syntax match dhallLabel "\v[A-Z][a-z]*/[a-z_][A-Za-z0-9\.]*"
+syntax match dhallLabel "\v[A-Z][a-z]*/[a-z_][A-Za-z0-9\.\-]*"
 syntax match dhallLabel "\v[a-z_][A-Za-z0-9\-]*"
 syntax match dhallType "\v[a-zA-Z]+\.[A-Z][a-z0-9A-Z]*"
 syntax match dhallParens "(\|)\|\[\|\]\|,"
