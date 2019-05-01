@@ -23,7 +23,7 @@ function! StripTrailingWhitespace()
 endfunction
 
 if exists('g:dhall_strip_whitespace')
-    if g:dhall_use_ctags == 1
+    if g:dhall_strip_whitespace == 1
         augroup dhall
             au BufWritePre *.dhall silent! call StripTrailingWhitespace()
         augroup END
