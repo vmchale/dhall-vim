@@ -22,7 +22,14 @@ function! StripTrailingWhitespace()
     call cursor(myline, mycolumn)
 endfunction
 
+if exists('g:dhall_strip_whitespace')
+    if g:dhall_use_ctags == 1
+        augroup dhall
+            au BufWritePre *.dhall silent! call StripTrailingWhitespace()
+        augroup END
+    endif
+endif
+
 augroup dhall
     au BufNewFile,BufRead *.dhall setl shiftwidth=2
-    au BufWritePre *.dhall silent! call StripTrailingWhitespace()
 augroup END
