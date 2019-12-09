@@ -7,7 +7,6 @@ endif
 syntax match dhallInterpolation "\v\$\{([^\}]|\\n)*\}"
 syntax keyword dhallTodo TODO FIXME
 syntax match dhallBrackets "[<>|]"
-syntax match dhallHash "sha256:[a-f0-9]+"
 syntax match dhallOperator "+\|*\|#"
 syntax match dhallOperator "//\|⫽"
 syntax match dhallOperator "/\\\|∧"
@@ -38,6 +37,7 @@ syntax region dhallString start=+''+ end=+''+ contains=@Spell,dhallInterpolation
 syntax region dhallString start=+"+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax region dhallString start=+"/+ end=+"+ contains=dhallInterpolation,dhallEsc
 syntax keyword dhallBool True False
+syntax match dhallHash "sha256:[a-f0-9]+"
 
 highlight link dhallSingleSpecial Special
 highlight link dhallIndex Special
