@@ -39,7 +39,7 @@ endfunction
 if exists('g:dhall_format')
     if g:dhall_format == 1
         augroup dhall
-            au BufWritePre *.dhall silent! call DhallFormat()
+            au BufWritePre *.dhall call DhallFormat()
         augroup END
     endif
 endif
