@@ -18,6 +18,13 @@ Generate tags file for vim on write, using universal ctags. >
     let g:dhall_use_ctags=1
 <
 
+                                                    *'g:dhall_format'*
+Values: 0, 1
+Default: ''
+
+Format Dhall files on write >
+    let g:dhall_format=1
+<
                                           *'g:dhall_strip_whitespace'*
 Values: 0, 1
 Default: ''
