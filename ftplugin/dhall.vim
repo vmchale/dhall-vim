@@ -41,7 +41,7 @@ endfunction
 if exists('g:dhall_format')
     if g:dhall_format == 1
         augroup dhall
-            au BufWritePre *.dhall call DhallFormat()
+            au BufWritePost *.dhall call DhallFormat()
         augroup END
     endif
 endif
