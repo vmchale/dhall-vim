@@ -32,7 +32,8 @@ endif
 
 function! DhallFormat()
     let cursor = getpos('.')
-    exec 'silent %!dhall format'
+    exec 'silent !dhall format --inplace ' . expand('%')
+    exec 'e'
     call setpos('.', cursor)
 endfunction
 
