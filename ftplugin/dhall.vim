@@ -30,6 +30,22 @@ if exists('g:dhall_strip_whitespace')
     endif
 endif
 
+function! DhallFormat()
+    let cursor = getpos('.')
+    exec 'normal! gg'
+    exec 'silent !dhall format --inplace ' . expand('%')
+    exec 'e'
+    call setpos('.', cursor)
+endfunction
+
+if exists('g:dhall_format')
+    if g:dhall_format == 1
+        augroup dhall
+            au BufWritePost *.dhall call DhallFormat()
+        augroup END
+    endif
+endif
+
 augroup dhall
     au BufNewFile,BufRead *.dhall setl shiftwidth=2
 augroup END
