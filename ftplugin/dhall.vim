@@ -7,6 +7,8 @@ setlocal commentstring=--\ %s
 
 set smarttab
 
+autocmd! dhall
+
 if exists('g:dhall_use_ctags')
     if g:dhall_use_ctags == 1
         augroup dhall
